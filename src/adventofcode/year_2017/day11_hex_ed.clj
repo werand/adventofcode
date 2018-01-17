@@ -1,3 +1,6 @@
+(ns adventofcode.year-2017.day11-hex-ed
+  "Day11 solution")
+
 ;; --- Day 11: Hex Ed ---
 ;;
 ;; Crossing the bridge, you've barely reached the other side of the stream

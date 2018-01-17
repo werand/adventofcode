@@ -1,3 +1,6 @@
+(ns adventofcode.year-2017.day24-electromagnetic-moat
+  "Day24 solution")
+
 ;; --- Day 24: Electromagnetic Moat ---
 ;;
 ;; The CPU itself is a large, black building surrounded by a bottomless
@@ -43,7 +46,9 @@
 ;; What is the strength of the strongest bridge you can make with the
 ;; components you have available?
 ;;
-;; Your puzzle answer was 1940.  --- Part Two ---
+;; Your puzzle answer was 1940.
+;;
+;; --- Part Two ---
 ;;
 ;; The bridge you've built isn't long enough; you can't jump the rest of
 ;; the way.
@@ -60,8 +65,6 @@
 ;;
 ;; Your puzzle answer was 1928.
 
-(def input [[0 2] [2 2] [2 3] [3 4] [3 5] [0 1] [1 10] [9 10]])
-
 (defn matches? [size [a b]]
   (or (= a size) (= b size)))
 
@@ -71,7 +74,7 @@
 
 (defn build-bridges
   ([components]
-   (->> (build-bridges input 0 [])
+   (->> (build-bridges components 0 [])
         (tree-seq seq? identity)
         (filter vector?)))
   ([components size bridges]
@@ -96,14 +99,15 @@
        (map #(mapv (fn [x] (Integer/parseInt x)) %))
        (map sort)))
 
+#_(def input [[0 2] [2 2] [2 3] [3 4] [3 5] [0 1] [1 10] [9 10]])
 #_(def input (parse-input "resources/year_2017/day24_moat_input"))
 
 #_(apply max (filter (complement nil?) (compute-strength (build-bridges input))))
 ;=> 1940
 
 ; Day 2
-;(apply max (map count (build-bridges input)))
+#_(apply max (map count (build-bridges input)))
 ;=> 35
-;(def t (filter #(= 35 (count %)) (build-bridges input)))
-;(apply max (map strength t))
+#_(def t (filter #(= 35 (count %)) (build-bridges input)))
+#_(apply max (map strength t))
 ;=> 1928

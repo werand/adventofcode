@@ -1,3 +1,6 @@
+(ns adventofcode.year-2017.day17-spinlock
+  "Day17 solution")
+
 ;; --- Day 17: Spinlock ---
 ;;
 ;; Suddenly, whirling in the distance, you notice what looks like a
@@ -91,7 +94,6 @@
 
 ;(spinlock 3 2017)
 ;=> 638
-
 
 ;; Part 2
 ; The 0 always stays in front, so only the first index is relevant

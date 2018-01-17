@@ -1,3 +1,7 @@
+(ns adventofcode.year-2017.day05-trampolines
+  "Day05 Solution"
+  (:require [clojure.string :refer [split] :as s]))
+
 ;; --- Day 5: A Maze of Twisty Trampolines, All Alike ---
 ;;
 ;; An urgent interrupt arrives from the CPU: it's trapped in a maze of jump
@@ -67,11 +71,11 @@
 
 
 #_(execute-program inc (->> (slurp "resources/year_2017/day05_trampolines")
-                             (#(clojure.string/split % #"\n"))
+                             (#(s/split % #"\n"))
                              (mapv #(Integer/parseInt %))))
 ;=> 378980
 
 #_(execute-program incdec (->> (slurp "resources/year_2017/day05_trampolines")
-                      (#(clojure.string/split % #"\n"))
+                      (#(s/split % #"\n"))
                       (mapv #(Integer/parseInt %))))
 ;=> 26889114

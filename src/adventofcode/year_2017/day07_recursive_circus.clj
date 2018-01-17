@@ -1,3 +1,7 @@
+(ns adventofcode.year-2017.day07-recursive-circus
+  "Day07 solution"
+  (:require [clojure.string :refer [split] :as s]))
+
 ;; --- Day 7: Recursive Circus ---
 ;;
 ;; Wandering further through the circuits of the computer, you come upon a
@@ -70,7 +74,7 @@
 ;;  Your puzzle answer was hlqnsbe.
 
 (defn show-root [node-hierarchie]
-  (let [lines (clojure.string/split node-hierarchie #"\n")
+  (let [lines (s/split node-hierarchie #"\n")
         words (map #(re-seq #"\w+" %) lines)
         nodes (into #{} (map first words))
         sub-nodes (map #(drop 2 %) words)
@@ -118,7 +122,7 @@
 (defn balance-weight
   ([node-hierarchie]
    (let [root (first (show-root node-hierarchie))
-         lines (clojure.string/split node-hierarchie #"\n")
+         lines (s/split node-hierarchie #"\n")
          words (map #(re-seq #"\w+" %) lines)
          node-> (reduce #(let [[node weight & sub-nodes] %2
                                weight (Integer/parseInt weight)]

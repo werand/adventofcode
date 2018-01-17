@@ -1,3 +1,6 @@
+(ns adventofcode.year-2017.day19-tubes
+  "Day19 solution")
+
 ;; --- Day 19: A Series of Tubes ---
 ;;
 ;; Somehow, a network packet got lost and ended up here. It's trying to
@@ -140,4 +143,5 @@
       [(:l tube-maze) steps]
       (recur (next-pos tube-maze) (inc steps)))))
 
-(follow-tube-path (load-tube-maze "resources/day19_tube_maze"))
+#_(follow-tube-path (load-tube-maze "resources/year_2017/day19_tube_maze"))
+#_(follow-tube-path (load-tube-maze "resources/year_2017/day19_big-tube-maze"))

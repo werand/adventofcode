@@ -1,3 +1,6 @@
+(ns adventofcode.year-2017.day13-packet-scanners
+  "Day13 solution")
+
 ;; --- Day 13: Packet Scanners ---
 ;;
 ;; You need to cross a vast firewall. The firewall consists of several
@@ -360,18 +363,20 @@
     (first (filter (fn [[[_ catched?] delay]] (not catched?))
                    (pmap #(vector (run-scanner layer->depth %) %) (range))))))
 
-
-(find-pass-through
-;(run-scanner
-"0: 3
+#_(run-scanner
+ "0: 3
 1: 2
 4: 4
-6: 4" )
+6: 4")
 
+#_(find-pass-through "0: 3
+1: 2
+4: 4
+6: 4")
 
-(find-pass-through
-;(run-scanner
-     "0: 5
+   ;run-scanner
+#_(find-pass-through
+"0: 5
 1: 2
 2: 3
 4: 4

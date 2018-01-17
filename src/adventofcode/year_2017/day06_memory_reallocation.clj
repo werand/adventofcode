@@ -1,3 +1,5 @@
+(ns adventofcode.year-2017.day06-memory-reallocation
+  "day06 solution")
 ;; --- Day 6: Memory Reallocation ---
 ;;
 ;; A debugger program here is having an issue: it is trying to repair a
@@ -135,4 +137,5 @@
               ]
           (recur banks (conj steps banks) finished-after-one-cycle? (inc rebalances) cycle cycle-counter))))))
 
-;(rebalance2 [5	1	10	0	1	7	13	14	3	12	8	10	7	12	0	6]) Ergebnis -1
+#_(rebalance2 [5	1	10	0	1	7	13	14	3	12	8	10	7	12	0	6])
+; Ergebnis -1

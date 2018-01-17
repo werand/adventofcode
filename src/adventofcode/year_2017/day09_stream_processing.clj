@@ -1,3 +1,6 @@
+(ns adventofcode.year-2017.day09-stream-processing
+  "Day09 solution")
+
 ;; --- Day 9: Stream Processing ---
 ;;
 ;; A large stream blocks your path. According to the locals, it's not

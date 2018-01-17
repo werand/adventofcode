@@ -1,3 +1,6 @@
+(ns adventofcode.year-2017.day22-sporifica-virus-p2
+  "Day22  solution - part 2")
+
 ;; --- Day 22: Sporifica Virus ---
 ;;
 ;; Diagnostics indicate that the local grid computing cluster has been
@@ -314,7 +317,7 @@
                         ((fn [s] [(apply min s) (apply max s)])))
         x-size (+ (Math/abs min-x) (Math/abs max-x))]
     (clojure.string/join "\n"
-                         (map #(apply str %) 
+                         (map #(apply str %)
                               (for [y (range min-y (inc y-size))]
                                 (for [x (range min-x (inc x-size))]
                                   (get m [x y] \.)))))))
@@ -332,5 +335,5 @@
         (recur (dec i) (process-burst input))
         [@infection-count (:direction input) (:pos input)]))))
 
-#_(simulate "resources/year_2017/day22_sporifica_virus_input" 10000)
+#_(simulate "resources/year_2017/day22_sporifica_virus_input" 10000000)
 ;=> 2512261

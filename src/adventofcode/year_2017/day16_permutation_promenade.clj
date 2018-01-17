@@ -1,3 +1,6 @@
+(ns adventofcode.year-2017.day16-permutation-promenade
+  "Day16 solution")
+
 ;; --- Day 16: Permutation Promenade ---
 ;;
 ;; You come upon a very unusual sight; a group of programs here appear to

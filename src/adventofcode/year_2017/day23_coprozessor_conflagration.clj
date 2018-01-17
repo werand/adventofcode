@@ -1,3 +1,6 @@
+(ns adventofcode.year-2017.day23-coprozessor-conflagration
+  "Day23 solution")
+
 ;; --- Day 23: Coprocessor Conflagration ---
 ;;
 ;; You decide to head directly to the CPU and fix the printer from
@@ -181,4 +184,5 @@
 (defn prime? [n]
   (and (> n 1) (not-any? (partial divisible? n) (range 2 n))))
 
-(- (count (range 106700 123701 17)) (count (filter prime? (range 106700 123701 17))))
+#_(- (count (range 106700 123701 17)) (count (filter prime? (range 106700 123701 17))))
+;=> 905

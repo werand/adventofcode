@@ -1,3 +1,6 @@
+(ns adventofcode.year-2017.day12-digital-plumber
+  "Day12 solution")
+
 ;; --- Day 12: Digital Plumber ---
 ;;
 ;; Walking along the memory banks of the stream, you find a small

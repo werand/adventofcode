@@ -1,3 +1,6 @@
+(ns adventofcode.year-2017.day21-fractal-art
+  "Day21 solution")
+
 ;; --- Day 21: Fractal Art ---
 ;;
 ;; You find a program trying to generate some art. It uses a strange
@@ -170,13 +173,13 @@
                     (map (fn [a b c] [a b c]) (first p) (second p) (second (rest p))))
               new-row (mapcat (partial find-pattern b) row)
               new-pattern (conj new-pattern new-row)]
-            (recur i (drop partition-size p) new-pattern))))))
+            (recur (drop partition-size p) new-pattern))))))
 
 
-#_(def b (load-book-of-enhancement "resources/day21_book_of_enhancment_lite"))
+#_(def b (load-book-of-enhancement "resources/year_2017/day21_book_of_enhancment_lite"))
 #_(next-pattern b (next-pattern b start-pattern))
 
-#_(def b (load-book-of-enhancement "resources/day21_book_of_enhancement"))
+#_(def b (load-book-of-enhancement "resources/year_2017/day21_book_of_enhancement"))
 #_(count
     (filter #(= \# %)
             (flatten
@@ -188,10 +191,10 @@
 
 #_(count (filter #(= \# %)
                  (flatten (first (drop 5 (iterate (partial next-pattern b) start-pattern))))))
-
-; Answer 186
+;=> 186
 
 ;; Part 2
 
 #_(count (filter #(= \# %)
                  (flatten (first (drop 18 (iterate (partial next-pattern b) start-pattern))))))
+;=> 3018423

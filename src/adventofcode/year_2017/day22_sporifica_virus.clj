@@ -1,3 +1,6 @@
+(ns adventofcode.year-2017.day22-sporifica-virus
+  "Day22 solution - part 1")
+
 ;; --- Day 22: Sporifica Virus ---
 ;;
 ;; Diagnostics indicate that the local grid computing cluster has been

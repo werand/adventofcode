@@ -1,3 +1,6 @@
+(ns adventofcode.year-2017.day18-duet-p2
+  "Day 18 solution - part 2")
+
 ;; Day 18
 ;; --- Part Two ---
 ;;
@@ -84,7 +87,7 @@
   (receive [this p] "")
   (deadlock? [this] ""))
 
-(defrecord DeadlockAwareSendReceiveQueue [q1 q2]
+(defrecord SendReceiveQueue [q1 q2]
 
   Queue
 
@@ -109,7 +112,7 @@
        (nil? (peek (deref (:q2 this))))))
 
 (defn make-queue []
-  (DeadlockAwareSendReceiveQueue. (atom clojure.lang.PersistentQueue/EMPTY)
+  (SendReceiveQueue. (atom clojure.lang.PersistentQueue/EMPTY)
                                   (atom clojure.lang.PersistentQueue/EMPTY)))
 
 (defmulti command (fn [c _ _] (c :command)))

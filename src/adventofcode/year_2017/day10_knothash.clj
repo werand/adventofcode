@@ -149,7 +149,6 @@
     (wrap size (+ size value))
     (- value (* (quot value size) size))))
 
-
 (defn reverse-subvector [size v pos length]
   (loop [new-v v
          start-pos pos
@@ -162,9 +161,7 @@
              (dec length))
       new-v)))
 
-
 (def size 256)
-
 
 (defn myhash
   ([lengths]
@@ -186,7 +183,6 @@
 
 #_(myhash [106,118,236,1,130,0,235,254,59,205,2,87,129,25,255,118])
 
-
 (defn hash-rounds [s]
   (let [[result current-pos skip] (myhash s)]
     (loop [result result
@@ -198,7 +194,6 @@
           (recur temp-result current-pos skip (dec rounds)))
         result))))
 
-
 (defn hash-string [s]
   (let [char-seq (map int (seq s))
         lengths (concat char-seq [17, 31, 73, 47, 23])
@@ -207,5 +202,4 @@
         hex-str-blocks (apply str (map #(format "%02x" %) blocks))]
     hex-str-blocks))
 
-
-(= (hash-string "1,2,3") "3efbe78a8d82f29979031a4aa0b16a9d")
+#_(= (hash-string "1,2,3") "3efbe78a8d82f29979031a4aa0b16a9d")

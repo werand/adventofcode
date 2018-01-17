@@ -1,3 +1,6 @@
+(ns adventofcode.year-2017.day08-corruption-checksum
+  "Day08 solution")
+
 ;; --- Day 8: I Heard You Like Registers ---
 ;;
 ;; You receive a signal directly from the CPU. Because of your recent

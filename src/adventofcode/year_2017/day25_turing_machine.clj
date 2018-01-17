@@ -1,3 +1,6 @@
+(ns adventofcode.year-2017.day25-turing-machine
+  "Day 25 solution")
+
 ;; --- Day 25: The Halting Problem ---
 ;;
 ;; Following the twisty passageways deeper and deeper into the CPU, you
@@ -145,5 +148,5 @@
                      :move       :right
                      :next-state :E}}})
 
-; (run-turing-pgm pgm 12261543)
+#_(run-turing-pgm pgm 12261543)
 ;=> 5744

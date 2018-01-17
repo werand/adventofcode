@@ -1,3 +1,6 @@
+(ns adventofcode.year-2017.day18-duet
+  "Day18 solution - part 1")
+
 ;; --- Day 18: Duet ---
 ;;
 ;; You discover a tablet containing some strange assembly code labeled

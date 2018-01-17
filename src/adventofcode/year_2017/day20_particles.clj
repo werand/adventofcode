@@ -1,3 +1,6 @@
+(ns adventofcode.year-2017.day20-particles
+  "Day 20 solution")
+
 ;; --- Day 20: Particle Swarm ---
 ;;
 ;; Suddenly, the GPU contacts you, asking for help. Someone has asked it to
@@ -85,4 +88,14 @@
         last-order
         (recur p new-order (if (= last-order new-order) (inc i) i))))))
 
-#_(simulate-particles (parse-file "resources/day20_particle_input"))
+#_(simulate-particles (parse-file "resources/year_2017/day20_particle_input"))
+;=>  0. 344
+;  1. 336
+;  2. 466
+;  3. 115
+;  4. 222
+;  5. 14
+;  6. 509
+;  7. 386
+;  8. 209
+;...
